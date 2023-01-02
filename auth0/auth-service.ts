@@ -33,7 +33,6 @@ async function loginWithPopup(options: PopupLoginOptions) {
 		user.set((await auth0Client.getUser()) as User);
 		isAuthenticated.set(true);
 	} catch (e) {
-		// eslint-disable-next-line
 		console.error(e);
 	} finally {
 		popupOpen.set(false);

@@ -1,6 +1,8 @@
 {
 	"name": "sveltekit-auth0",
 	"version": "0.0.1",
+	"license": "MIT",
+	"private": false,
 	"scripts": {
 		"dev": "vite dev",
 		"build": "svelte-kit sync && svelte-package",
@@ -36,6 +38,7 @@
 		"@auth0/auth0-spa-js": "^1.22.5"
 	},
 	"exports": {
+		".": "./auth0/auth-service.ts",
 		"./package.json": "./package.json",
 		"./auth0/auth-service": "./auth0/auth-service.ts",
 		"./auth0/auth-config": "./auth0/auth-config.ts",
