@@ -34,5 +34,19 @@
 	"type": "module",
 	"dependencies": {
 		"@auth0/auth0-spa-js": "^1.22.5"
-	}
+	},
+	"exports": {
+		"./package.json": "./package.json",
+		"./auth0/auth-service": "./auth0/auth-service.ts",
+		"./auth0/auth-config": "./auth0/auth-config.ts",
+		"./src/store": "./src/store.js"
+	},
+	"keywords": [
+		"svelte",
+		"sveltekit",
+		"svelte-kit",
+		"auth0",
+		"authentication",
+		"auth"
+	]
 }
