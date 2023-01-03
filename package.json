@@ -38,10 +38,10 @@
 		"@auth0/auth0-spa-js": "^1.22.5"
 	},
 	"exports": {
-		".": "./auth0/auth-service.ts",
+		".": "./auth0/auth-service.js",
 		"./package.json": "./package.json",
-		"./auth0/auth-service": "./auth0/auth-service.ts",
-		"./auth0/auth-config": "./auth0/auth-config.ts",
+		"./auth0/auth-service": "./auth0/auth-service.js",
+		"./auth0/auth-config": "./auth0/auth-config.js",
 		"./src/store": "./src/store.js"
 	},
 	"keywords": [
@@ -51,5 +51,6 @@
 		"auth0",
 		"authentication",
 		"auth"
-	]
+	],
+	"main": "./auth0/auth-service.js"
 }

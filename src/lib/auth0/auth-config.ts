@@ -1,4 +1,4 @@
-import Auth0Config from './models/auth-config.model';
+import type Auth0Config from './models/auth-config.model';
 
 const config: Auth0Config = {
 	domain: import.meta.env.VITE_PUBLIC_AUTH0_DOMAIN,
