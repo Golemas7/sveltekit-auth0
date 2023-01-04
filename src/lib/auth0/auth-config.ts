@@ -1,11 +1,13 @@
-require('dotenv').config();
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 import type Auth0Config from './models/auth-config.model';
 
 const config: Auth0Config = {
-	domain: process.env['PUBLIC_AUTH0_DOMAIN'] as string,
-	clientId: process.env['PUBLIC_AUTH0_CLIENT_ID'] as string,
-	redirectUri: process.env['PUBLIC_AUTH0_REDIRECT_URI'] as string
+	domain: import.meta.env['PUBLIC_VITE_AUTH0_DOMAIN'],
+	clientId: import.meta.env['PUBLIC_VITE_AUTH0_CLIENT_ID'],
+	redirectUri: import.meta.env['PUBLIC_VITE_AUTH0_REDIRECT_URI']
 };
 
 export default config;
