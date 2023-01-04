@@ -1,7 +1,3 @@
-import dotenv from 'dotenv';
-
-dotenv.config();
-
 import type Auth0Config from './models/auth-config.model';
 
 const config: Auth0Config = {
