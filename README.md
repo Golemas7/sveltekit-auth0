@@ -2,6 +2,8 @@
 
 This package is designed to provide you with auth0 authentication for your svelte-kit app
 
+[Github repository](https://github.com/Golemas7/sveltekit-auth0)
+
 # Setting up this package
 
 1. Create an Application in [Auth0 website](https://auth0.com/)
@@ -32,5 +34,11 @@ You should now be able to use the main methods for interacting with Auth0:
 * `getPopupOpen` - will return if the login popup is open or not
 * `loginWithPopup` - will attempt to log the user in by providing a popup with a login window from Auth0
 * `logout` - will log the user out
+
+
+## Reporting issues, asking for features
+
+If you find any issues, please open up an issue on the [repository](https://github.com/Golemas7/sveltekit-auth0).
+You can also post anny feature suggestions or improvements there.
 
 ## Happy coding!
