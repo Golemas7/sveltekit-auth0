@@ -1,6 +1,6 @@
 {
 	"name": "sveltekit-auth0",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"license": "MIT",
 	"private": false,
 	"scripts": {
@@ -39,10 +39,8 @@
 	},
 	"exports": {
 		".": "./auth0/auth-service.js",
-		"./package.json": "./package.json",
-		"./auth0/auth-service": "./auth0/auth-service.js",
-		"./auth0/auth-config": "./auth0/auth-config.js",
-		"./src/store": "./src/store.js"
+		"./auth0/": "./auth0/",
+		"./package.json": "./package.json"
 	},
 	"keywords": [
 		"svelte",
