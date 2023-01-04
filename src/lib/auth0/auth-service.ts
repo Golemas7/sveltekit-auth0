@@ -1,7 +1,7 @@
 import config from './auth-config.js';
 import createAuth0Client, { Auth0Client } from '@auth0/auth0-spa-js';
 import { get } from 'svelte/store';
-import { popupOpen, user, isAuthenticated, error, client } from '../store';
+import { popupOpen, user, isAuthenticated, error, client } from '../store.js';
 
 import type { PopupLoginOptions, User } from '@auth0/auth0-spa-js';
 import type { Readable } from 'svelte/store';
