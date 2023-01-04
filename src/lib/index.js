@@ -9,7 +9,7 @@ import auth, {
 	getPopupOpenValue,
 	getError,
 	getErrorValue
-} from './auth0/auth-service';
+} from './auth0/auth-service.js';
 
 export {
 	getUser,
