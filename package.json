@@ -38,7 +38,7 @@
 		"@auth0/auth0-spa-js": "^1.22.5"
 	},
 	"exports": {
-		".": "./auth0/auth-service.js",
+		".": "./index.js",
 		"./auth0/": "./auth0/",
 		"./package.json": "./package.json"
 	},
