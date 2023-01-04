@@ -1,8 +1,10 @@
-import createAuth0Client, { Auth0Client } from '@auth0/auth0-spa-js';
-import type { PopupLoginOptions, User } from '@auth0/auth0-spa-js';
 import config from './auth-config';
-import { popupOpen, user, isAuthenticated, error, client } from '../store';
+import createAuth0Client, { Auth0Client } from '@auth0/auth0-spa-js';
 import { get } from 'svelte/store';
+import { popupOpen, user, isAuthenticated, error, client } from '../store';
+
+import type { PopupLoginOptions, User } from '@auth0/auth0-spa-js';
+import type { Readable } from 'svelte/store';
 
 async function createClient() {
 	const auth0Client = await createAuth0Client({
@@ -45,20 +47,36 @@ function logout() {
 	return auth0Client.logout();
 }
 
-export function getUser(): User {
+export function getUserValue(): User {
 	return get(user);
 }
 
-export function getIsAuthenticated(): boolean {
+export function getUser(): Readable<User> {
+	return user;
+}
+
+export function getIsAuthenticatedValue(): boolean {
 	return get(isAuthenticated);
 }
 
-export function getPopupOpen(): boolean {
+export function getIsAuthenticated(): Readable<boolean> {
+	return isAuthenticated;
+}
+
+export function getPopupOpenValue(): boolean {
 	return get(popupOpen);
 }
 
-export function getError(): boolean {
+export function getPopupOpen(): Readable<boolean> {
+	return popupOpen;
+}
+
+export function getErrorValue(): boolean {
 	return get(error);
+}
+
+export function getError(): Readable<boolean> {
+	return error;
 }
 
 const auth = {
