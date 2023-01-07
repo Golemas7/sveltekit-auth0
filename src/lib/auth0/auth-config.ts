@@ -1,16 +1,8 @@
 import type Auth0Config from './models/auth-config.model';
 
-const auth0Domain = process?.env
-	? process.env['VITE_AUTH0_DOMAIN']
-	: import.meta.env['VITE_AUTH0_DOMAIN'];
-
-const auth0ClientId = process?.env
-	? process.env['VITE_AUTH0_CLIENT_ID']
-	: import.meta.env['VITE_AUTH0_CLIENT_ID'];
-
-const auth0RedirectUri = process?.env
-	? process.env['VITE_AUTH0_REDIRECT_URI']
-	: import.meta.env['VITE_AUTH0_DOMAIN'];
+const auth0Domain = import.meta.env ? import.meta.env['PUBLIC_VITE_AUTH0_DOMAIN'] : '';
+const auth0ClientId = import.meta.env ? import.meta.env['PUBLIC_VITE_AUTH0_CLIENT_ID'] : '';
+const auth0RedirectUri = import.meta.env ? import.meta.env['PUBLIC_VITE_AUTH_REDIRECT_URI'] : '';
 
 const config: Auth0Config = {
 	domain: auth0Domain,
