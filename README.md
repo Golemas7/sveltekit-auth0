@@ -4,22 +4,29 @@ This package is designed to provide you with auth0 authentication for your svelt
 
 [Github repository](https://github.com/Golemas7/sveltekit-auth0)
 
+If something is unclear, you can take a look at the [Demo App](https://master--extraordinary-babka-cc02be.netlify.app) and [Demo app repo](https://github.com/Golemas7/sveltekit-auth0)
+
+
+### NOTE: Please use 0.1.0 or later version of this package.
+
+
 # Setting up this package
 
 1. Create an Application in [Auth0 website](https://auth0.com/)
 
-2. Under the settings tab of you application, find the Basic Information section. Then find the `Domain` and `Client ID` strings. You will need these later.
+2. Under the settings tab of you application, find the Basic Information section.
+Then find the `Domain` and `Client ID` strings. You will need these later.
 
 3. Under the settings tab of you application, find the Application URIs section. 
    Then find the `Allowed Logout URLs`, `Allowed Web Origins` and `Allowed Origins (CORS)` inputs. 
    Fill these inputs with the url that your app is running locally ( e.x. `http://localhost:3000` ).
-   There is an additional input `Allowed Callback URLs`, fill this when needed.
+   There is an additional input `Allowed Callback URLs`, fill this with your callback URL, if you do not have one - fill the url that your app is running at ( e.x. `http://localhost:3000` ).
 
 4. Create an .env file for your project and declare these variables:
 
-* `VITE_PUBLIC_AUTH0_DOMAIN` - Fill with the `Domain` data from step 1
-* `VITE_PUBLIC_AUTH0_CLIENT_ID` - Fill with the `Domain` data from step 1
-* `VITE_PUBLIC_AUTH0_REDIRECT_URI` - Fill if your app has a `redirect URI` ( optional )
+* `VITE_AUTH0_DOMAIN` - Fill with the `Domain` data from step 2 of Setting up this package section
+* `VITE_AUTH0_CLIENT_ID` - Fill with the `Client ID` data from step 2 of Setting up this package section
+* `VITE_AUTH0_REDIRECT_URI` - Fill if your app has a `redirect URI` ( optional )
 
 ## Initializing the Auth0
 
